@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e06e82c59d6a55d4ea1c37121f8c02d2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - woodPrefab: {fileID: 8176448640178304860, guid: e5b2d918c558957488322a123c319ff3, type: 3}
+  - stonePrefab: {fileID: 3283716293288513094, guid: dd1a27d1d192b8849994c9a8e2c6df8a, type: 3}
+  - ropePrefab: {fileID: 2236373048151699434, guid: be49ccdbf80103c45a49c221d2e077db, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

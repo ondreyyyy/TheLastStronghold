@@ -1,0 +1,4 @@
+repository "The Last Stronghold/The Last Stronghold@10171563898240@cloud"
+  path "/"
+    br "/main"
+    co "/main"
