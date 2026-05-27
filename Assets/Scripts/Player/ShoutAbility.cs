@@ -19,7 +19,7 @@ public class ShoutAbility : NetworkBehaviour
     public AudioSource audioSource;
     public AudioClip shoutClip;
 
-    // NetworkVariable — значение forestAlert синхронизируется всем клиентам автоматически
+    //NetworkVariable значение forestAlert синхронизируется всем клиентам автоматически
     public NetworkVariable<int> forestAlert = new NetworkVariable<int>(
         0,
         NetworkVariableReadPermission.Everyone,
@@ -41,23 +41,23 @@ public class ShoutAbility : NetworkBehaviour
 
         lastShoutTime = Time.time;
 
-        // отправляем запрос на сервер
+        //отправка запроса на сервер
         UseShoutServerRpc();
     }
 
-    // ServerRpc — вызывается клиентом, выполняется на сервере
+    //serverrpc вызывается клиентом выполняется на сервере
     [Rpc(SendTo.Server, InvokePermission = RpcInvokePermission.Everyone)]
     void UseShoutServerRpc()
     {
-        // сервер увеличивает счётчик — NetworkVariable сам разошлёт всем
+        //сервер увеличивает счётчик
         forestAlert.Value++;
 
-        // сервер рассылает эффекты всем клиентам
+        //сервер рассылает эффекты клиентам
         UseShoutClientRpc();
         Debug.Log("Shout! Resources are highlighted");
     }
 
-    // ClientRpc — вызывается сервером, выполняется на всех клиентах
+    //clientrpc вызывается сервером выполняется на клиентах
     [ClientRpc]
     void UseShoutClientRpc()
     {

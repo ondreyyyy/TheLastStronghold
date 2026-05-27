@@ -5,7 +5,7 @@ public class NetworkManagerKeepAlive : MonoBehaviour
 {
     void Awake()
     {
-        // если NetworkManager уже существует — уничтожаем дубликат
+        //если менеджер уже существует дубликат уничтожается
         if (FindObjectsByType<NetworkManagerKeepAlive>(FindObjectsSortMode.None).Length > 1)
         {
             Destroy(gameObject);
